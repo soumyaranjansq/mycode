@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Snake — Arcade</title>
+	<link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+	<nav class="nav">
+		<a class="logo" href="/">Arcade<span class="dot">.</span></a>
+		<div class="nav-actions">
+			<a class="btn" href="/">Home</a>
+		</div>
+	</nav>
+
+	<main class="game-container">
+		<div class="game-toolbar">
+			<div class="stat">Score: <span id="score">0</span></div>
+			<div class="stat">High Score: <span id="high">0</span></div>
+			<button class="btn primary" id="restart">Restart</button>
+		</div>
+		<div class="canvas-wrap">
+			<canvas id="board" width="480" height="480" aria-label="Snake game board" role="img"></canvas>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<p>Use arrow keys, WASD, or swipe.</p>
+	</footer>
+
+	<script src="/games/snake/snake.js"></script>
+</body>
+</html>
+
