@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Tic-Tac-Toe - Arcade Hub</title>
+    <link rel="stylesheet" href="./ttt.css"/>
+    <link rel="stylesheet" href="../../assets/css/styles.css"/>
+  </head>
+  <body>
+    <nav role="navigation" aria-label="Primary">
+      <div class="nav-inner">
+        <a class="brand" href="../../index.html">Arcade Hub</a>
+        <div class="nav-links">
+          <a href="../../leaderboard.html">Leaderboard</a>
+          <a href="../../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Tic-Tac-Toe</h1>
+      <div id="board" role="grid" aria-label="Tic Tac Toe Board"></div>
+      <div class="controls">
+        <button class="btn" id="reset">Reset</button>
+      </div>
+      <p id="status" aria-live="polite"></p>
+    </main>
+    <script src="./ttt.js" defer></script>
+  </body>
+</html>
