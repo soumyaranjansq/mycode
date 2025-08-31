@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Snake - Arcade Hub</title>
+    <link rel="stylesheet" href="./snake.css"/>
+    <link rel="stylesheet" href="../../assets/css/styles.css"/>
+  </head>
+  <body>
+    <nav role="navigation" aria-label="Primary">
+      <div class="nav-inner">
+        <a class="brand" href="../../index.html">Arcade Hub</a>
+        <div class="nav-links">
+          <a href="../../leaderboard.html">Leaderboard</a>
+          <a href="../../index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Snake</h1>
+      <canvas id="stage" width="480" height="480" aria-label="Snake game area"></canvas>
+      <div class="controls">
+        <button class="btn" id="restart">Restart</button>
+        <span id="score">Score: 0</span>
+      </div>
+    </main>
+    <script src="./snake.js" defer></script>
+  </body>
+</html>

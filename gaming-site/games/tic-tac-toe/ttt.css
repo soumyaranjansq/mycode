@@ -1,0 +1,12 @@
+#board {
+  display:grid;
+  grid-template-columns: repeat(3, 120px);
+  gap:8px;
+  margin: 16px 0;
+}
+.cell{
+  width:120px; height:120px; display:flex; align-items:center; justify-content:center;
+  background: var(--panel); border:1px solid #30363d; border-radius: 12px;
+  font-size:64px; font-weight:700; color:#fff; cursor:pointer;
+}
+.controls{ display:flex; gap:12px; }

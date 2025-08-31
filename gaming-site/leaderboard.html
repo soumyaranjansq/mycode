@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Leaderboard - Arcade Hub</title>
+    <link rel="stylesheet" href="./assets/css/styles.css"/>
+    <style>
+      .table{ width:100%; border-collapse: collapse; }
+      .table th,.table td{ border-bottom:1px solid #30363d; padding:12px; text-align:left;}
+    </style>
+  </head>
+  <body>
+    <nav role="navigation" aria-label="Primary">
+      <div class="nav-inner">
+        <a class="brand" href="./index.html">Arcade Hub</a>
+        <div class="nav-links">
+          <a href="./leaderboard.html" aria-current="page">Leaderboard</a>
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <h1>Leaderboard</h1>
+      <p class="muted">Top scores stored on this device.</p>
+      <table class="table" aria-describedby="desc">
+        <caption id="desc" class="sr-only">Shows the top scores by game and player</caption>
+        <thead>
+          <tr><th>Game</th><th>Player</th><th>Score</th><th>Date</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </main>
+    <footer class="footer">
+      <p>Built with ❤️ — <a href="./index.html">Arcade Hub</a></p>
+    </footer>
+    <script>
+      const tbody = document.getElementById('rows');
+      const data = JSON.parse(localStorage.getItem('arcade_leaderboard')||'[]');
+      data.sort((a,b)=> b.score - a.score);
+      tbody.innerHTML = data.map(r=>`<tr><td>${r.game}</td><td>${r.player}</td><td>${r.score}</td><td>${new Date(r.ts).toLocaleString()}</td></tr>`).join('');
+    </script>
+  </body>
+</html>
